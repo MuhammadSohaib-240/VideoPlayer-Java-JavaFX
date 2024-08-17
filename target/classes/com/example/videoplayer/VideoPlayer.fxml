@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videoplayer.VideoPlayerController">
+    <top>
+        <MenuBar fx:id="menuBar" prefWidth="600.0" BorderPane.alignment="CENTER">
+            
+        </MenuBar>
+    </top>
+    <bottom>
+        <AnchorPane fx:id="videoControllersLayout" prefHeight="84.0" prefWidth="600.0" BorderPane.alignment="TOP_CENTER">
+            <children>
+            <ProgressBar fx:id="progressBar" layoutX="122.0" layoutY="5.0" prefWidth="200.0" progress="0.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                <HBox alignment="CENTER" layoutX="50.0" layoutY="33.0" prefHeight="48.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="33.0">
+                    <children>
+                        <Button fx:id="extractImagesButton" mnemonicParsing="false" prefHeight="10.0" prefWidth="30.0" text="E">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Button fx:id="libraryButton" mnemonicParsing="false" prefHeight="10.0" prefWidth="30.0" text="L">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Button fx:id="screenshotButton" mnemonicParsing="false" prefHeight="10.0" prefWidth="30.0" text="S">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                        <Button fx:id="previousMediaButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="50.0" text="&lt;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Button fx:id="playPauseButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="O">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Button fx:id="nextMediaButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="50.0" text="&gt;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Button fx:id="changeRatioButton" mnemonicParsing="false"  prefHeight="10.0" prefWidth="30.0" text="F">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Button fx:id="volumeButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="60.0" text="Mute">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Slider fx:id="volumeSlider" prefHeight="14.0" prefWidth="84.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Slider>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </bottom>
+   <center>
+      <HBox fx:id="mediaViewLayout" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
